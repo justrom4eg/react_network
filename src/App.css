@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .app-wrapper {
@@ -11,7 +11,7 @@
     margin: 0 auto;
     grid-template-rows: 80px 1fr;
     grid-template-columns: 2fr 10fr;
-    grid-gap: 10px;
+    grid-gap: 20px;
     grid-template-areas:
         "header header"
         "nav kontent";
@@ -19,17 +19,21 @@
 
 .header {
     grid-area: header;
-    background: red;
+    border-top: 3px solid rgb(0, 242, 255);
+    border-bottom: 3px solid rgb(0, 242, 255);
     padding: 10px;
+    padding-left: 30px;
     display: grid;
     grid-template-columns: 2fr 10fr;
     align-items: center;
-
+    border-radius: 20px;
 }
 
 .logo-span {
     font-weight: 700;
     padding-left: 10px;
+    font-size: 30px;
+    letter-spacing: 5px;
 }
 
 .header img {
@@ -44,18 +48,21 @@
 
 .nav {
     grid-area: nav;
-    background: blueviolet;
-    padding: 10px;
+    padding: 30px;
+    border-radius: 20px;
+    border-top: 3px solid rgb(0, 242, 255);
+    border-bottom: 3px solid rgb(0, 242, 255);
 }
 
 .nav a {
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
     transition: 1s;
+    font-size: 30px;
 }
 
 .nav a:hover {
-    color: rgb(191, 191, 191);
+    color: rgb(1, 54, 146);
     letter-spacing: 5px;
     text-decoration: underline;
 }
@@ -68,7 +75,9 @@
 
 .content {
     grid-area: kontent;
-    background: yellow;
+    border-top: 3px solid rgb(0, 242, 255);
+    border-bottom: 3px solid rgb(0, 242, 255);
+    border-radius: 20px;
 }
 
 .bg-photo {
@@ -82,7 +91,7 @@
 }
 
 .main-info {
-    padding: 10px;
+    padding: 30px;
     display: flex;
     align-items: center;
 }
