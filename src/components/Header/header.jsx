@@ -1,8 +1,10 @@
+import classes from './header.module.css';
+
 function header() {
     return (
-        <header className='header'>
+        <header className={classes.header}>
             <img src='http://ibthemespro.com/docs/beny/img/side-nav/cmm4.png'></img>
-            <span className='logo-span'>Social React World</span>
+            <span className={classes.logoSpan}>Social React World</span>
         </header>
     )
 }

@@ -1,0 +1,23 @@
+.header {
+    grid-area: header;
+    border-top: 3px solid rgb(0, 242, 255);
+    border-bottom: 3px solid rgb(0, 242, 255);
+    padding: 10px;
+    padding-left: 30px;
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    align-items: center;
+    border-radius: 20px;
+    background: ghostwhite;
+}
+
+.logoSpan {
+    font-weight: 700;
+    padding-left: 10px;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+.header img {
+    height: 60px;
+}

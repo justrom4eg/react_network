@@ -1,0 +1,30 @@
+.nav {
+    grid-area: nav;
+    padding: 30px;
+    border-radius: 20px;
+    border-top: 3px solid rgb(0, 242, 255);
+    border-bottom: 3px solid rgb(0, 242, 255);
+    background: ghostwhite;
+}
+
+.nav a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: 1s;
+    font-size: 25px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.item {
+    border-radius: 10px;
+    border-left: 2px solid rgb(0, 242, 255);
+    border-right: 2px solid rgb(0, 242, 255);
+    margin-bottom: 15px;
+    width: 100%;
+    padding-left: 8px;
+}
+
+.item:hover{
+    background: rgb(200, 250, 253);
+    letter-spacing: 5px;
+}
