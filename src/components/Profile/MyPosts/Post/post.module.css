@@ -4,3 +4,34 @@
     border-radius: 50px;
     object-fit: cover;
 }
+
+.items {
+    border-left: 2px solid rgb(0, 242, 255);
+    border-right: 2px solid rgb(0, 242, 255);
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    background: rgb(207, 203, 203);
+}
+
+.ava{
+    width: 12%;
+}
+
+.postName{
+    font-size: 20px;
+}
+
+.postText{
+    padding-top: 10px;
+}
+
+.likes {
+    font-size: 14px;
+    float: right;
+}
+
+.postInfo{
+    width: 100%;
+}
