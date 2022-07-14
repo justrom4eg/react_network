@@ -1,12 +1,13 @@
 import classes from './post.module.css'
 
-function post() {
+function post(props) {
     return (
         <div className={classes.items}>
-            <img src="https://themoney.co/wp-content/uploads/2022/01/How-much-does-Ariana-Grande-make-2020-scaled.jpg" alt="" />
-            <div className={classes.item}>Post</div>
+            <img src={props.img} alt="" />
+            <span>{props.name}</span>
+            <div className={classes.item}>{props.message}</div>
             <div>
-                <span>Like 0</span>
+                <span>Like {props.like}</span>
             </div>
         </div>
     )
