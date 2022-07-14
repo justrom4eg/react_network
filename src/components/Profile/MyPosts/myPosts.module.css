@@ -1,0 +1,35 @@
+.textarea {
+    width: 75%;
+    height: 60px;
+    resize: none;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.newPost {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.buttAddNewPost{
+    width: 100px;
+    height: 35px;
+    background: ghostwhite;
+    font-family:Arial, Helvetica, sans-serif;
+    transition: 1s;
+    cursor: pointer;
+    border: 2px solid rgb(0, 242, 255);
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.buttAddNewPost:hover{
+    background: rgb(200, 250, 253);
+}
+
+.post {
+    width: 75%;
+    margin: 0 auto;
+}

@@ -5,6 +5,7 @@
     border-top: 3px solid rgb(0, 242, 255);
     border-bottom: 3px solid rgb(0, 242, 255);
     background: ghostwhite;
+    height: 400px;
 }
 
 .nav a {

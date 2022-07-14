@@ -1,4 +1,5 @@
 import classes from './profile.module.css';
+import MyPosts from './MyPosts/myPosts';
 
 function profile() {
   return (
@@ -16,12 +17,7 @@ function profile() {
           </div>
         </div>
       </div>
-
-      <div>New post</div>
-      <div className={classes.items}>
-        <div className={classes.item}>Post 1</div>
-        <div className={classes.item}>Post 2</div>
-      </div>
+      <MyPosts />
     </main>
   )
 }
