@@ -1,7 +1,7 @@
 import classes from "./myPosts.module.css"
 import Post from "./Post/post"
 
-function myPosts() {
+const myPosts = () => {
     return (
         <div>
             <div className={classes.newPost}>

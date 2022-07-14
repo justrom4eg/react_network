@@ -1,6 +1,6 @@
 import classes from './post.module.css'
 
-function post(props) {
+const post = (props) => {
     return (
         <div className={classes.items}>
             <div className={classes.ava}>

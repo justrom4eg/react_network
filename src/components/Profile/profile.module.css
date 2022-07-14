@@ -1,9 +1,5 @@
 .content {
   grid-area: kontent;
-  border-top: 3px solid rgb(0, 242, 255);
-  border-bottom: 3px solid rgb(0, 242, 255);
-  border-radius: 20px;
-  background: ghostwhite;
 }
 
 .bgPhoto {

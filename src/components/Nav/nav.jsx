@@ -1,22 +1,22 @@
 import classes from './nav.module.css';
 
-function nav() {
+const nav = () => {
     return (
         <nav className={classes.nav}>
             <div className={classes.item}>
-                <a href='#'>Home</a>
+                <a href='/profile'>Home</a>
             </div>
             <div className={classes.item}>
-                <a href='#'>Messages</a>
+                <a href='/messages'>Messages</a>
             </div>
             <div className={classes.item}>
-                <a href='#'>News</a>
+                <a href='/news'>News</a>
             </div>
             <div className={classes.item}>
-                <a href='#'>Music</a>
+                <a href='/music'>Music</a>
             </div>
             <div className={classes.item}>
-                <a href='#'>Settings</a>
+                <a href='/settings'>Settings</a>
             </div>
         </nav>
     )

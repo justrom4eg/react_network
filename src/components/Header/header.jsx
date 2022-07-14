@@ -1,6 +1,6 @@
 import classes from './header.module.css';
 
-function header() {
+const header = () => {
     return (
         <header className={classes.header}>
             <img src='http://ibthemespro.com/docs/beny/img/side-nav/cmm4.png'></img>

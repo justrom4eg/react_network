@@ -1,6 +1,6 @@
 import classes from './personalInfo.module.css'
 
-function personalInfo() {
+const personalInfo = () => {
     return (
         <div className={classes.mainInfo}>
             <div className={classes.avatarka}></div>
