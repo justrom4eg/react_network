@@ -1,7 +1,7 @@
 import classes from './news.module.css'
 
-const news = () =>{
-    return(
+const news = () => {
+    return (
         <div>
             News
         </div>

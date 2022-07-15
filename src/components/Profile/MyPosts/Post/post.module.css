@@ -1,4 +1,4 @@
-.items img{
+.items img {
     width: 70px;
     height: 70px;
     border-radius: 50px;
@@ -15,15 +15,15 @@
     background: rgb(207, 203, 203);
 }
 
-.ava{
+.ava {
     width: 12%;
 }
 
-.postName{
+.postName {
     font-size: 20px;
 }
 
-.postText{
+.postText {
     padding-top: 10px;
 }
 
@@ -32,7 +32,7 @@
     float: right;
 }
 
-.postInfo{
+.postInfo {
     width: 100%;
     padding-left: 15px;
 }

@@ -1,6 +1,6 @@
 import classes from './music.module.css'
 
-const music = () =>{
+const music = () => {
     return (
         <div>
             Music

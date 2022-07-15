@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .app-wrapper {
@@ -17,7 +17,7 @@
         "nav kontent";
 }
 
-.contentStyle{
+.contentStyle {
     border-top: 3px solid rgb(0, 242, 255);
     border-bottom: 3px solid rgb(0, 242, 255);
     border-radius: 20px;
