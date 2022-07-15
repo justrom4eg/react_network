@@ -1,22 +1,22 @@
 import classes from './dialogs.module.css';
-import Contact from './Contact/contact';
-import Message from './Message/message';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ContactItem from './ContactItem/contactItem';
+import MessageItem from './MessageItem/messageItem';
 
 const dialogs = () => {
     return (
             <div className={classes.content}>
                 <div className={classes.contact}>
-                    <Routes>
-                        <Route path='/' element={<Contact name="Nata" />}/>
-                        <Route path='/' element={<Contact name="Dima" />}/>
-                        <Route path='/' element={<Contact name="Katia" />}/>
-                    </Routes>
+                    <ContactItem name="Nata" id="1"/>
+                    <ContactItem name="Dima" id="2"/>
+                    <ContactItem name="Katia" id="3"/>
+                    <ContactItem name="Nazar" id="4"/>
+                    <ContactItem name="Ira" id="5"/>
+                    <ContactItem name="Ivan" id="6"/>
                 </div>
                 <div className={classes.message}>
-                    <Message />
-                    <Message />
-                    <Message />
+                    <MessageItem text="Hello"/>
+                    <MessageItem text="Hi!"/>
+                    <MessageItem text="How are you?"/>              
                 </div>
             </div>
     )

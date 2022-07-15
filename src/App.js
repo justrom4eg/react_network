@@ -17,7 +17,7 @@ function App() {
         <Nav />
         <div className='contentStyle'>
           <Routes>
-            <Route path='/messages' element={<Dialogs />} />
+            <Route path='/messages/*' element={<Dialogs />} />
             <Route path='/profile' element={<Profile />} />
             <Route path='/music' element={<Music />} />
             <Route path='/news' element={<News />} />
