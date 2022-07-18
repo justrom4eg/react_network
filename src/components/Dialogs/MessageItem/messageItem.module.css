@@ -1,7 +1,10 @@
-.item {
-    height: 40px;
-    padding: 10px;
+.itemDiv {
+    margin-bottom: 30px;
+}
+
+.itemSpan {
     background: rgb(213, 213, 213);
+    height: 40px;
+    padding: 12px;
     border-radius: 20px;
-    margin-bottom: 20px;
 }

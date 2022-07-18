@@ -1,16 +1,16 @@
-.content{
+.content {
     display: flex;
     padding-top: 30px;
 }
 
-.contact{
+.contact {
     width: 40%;
     border-right: 2px solid rgb(0, 242, 255);
     min-height: 100vh;
     padding: 15px;
 }
 
-.message{
+.message {
     width: 60%;
     padding: 15px;
 }

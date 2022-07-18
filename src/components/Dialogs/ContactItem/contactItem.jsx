@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import classes from './contactItem.module.css'
 
-const contactItem = (props) =>{
+const contactItem = (props) => {
 
     const setActive = navActive => navActive.isActive ? classes.active : ""
     let path = "/messages/" + props.id

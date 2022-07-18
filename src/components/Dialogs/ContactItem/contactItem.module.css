@@ -1,12 +1,12 @@
-a{
+a {
     text-decoration: none;
     color: black;
 }
 
-.item{
+.item {
     margin-bottom: 20px;
 }
 
-.active{
+.active {
     text-decoration: underline;
 }
