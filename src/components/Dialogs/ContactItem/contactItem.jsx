@@ -8,6 +8,7 @@ const contactItem = (props) => {
 
     return (
         <div className={classes.item}>
+            <span className={classes.imgContact}><img src={props.img} alt="" /> </span>
             <NavLink className={setActive} to={path}>{props.name}</NavLink>
         </div>
     )

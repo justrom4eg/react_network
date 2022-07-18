@@ -4,13 +4,13 @@
 }
 
 .contact {
-    width: 40%;
+    width: 30%;
     border-right: 2px solid rgb(0, 242, 255);
     min-height: 100vh;
     padding: 15px;
 }
 
 .message {
-    width: 60%;
+    width: 70%;
     padding: 15px;
 }

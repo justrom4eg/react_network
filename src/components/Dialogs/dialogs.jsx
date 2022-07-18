@@ -4,7 +4,7 @@ import MessageItem from './MessageItem/messageItem';
 
 const dialogs = (props) => {
 
-    let dialogsElement = props.contactData.map(dialog => <ContactItem name={dialog.name} id={dialog.id} />)
+    let dialogsElement = props.contactData.map(dialog => <ContactItem name={dialog.name} id={dialog.id} img={dialog.img}/>)
 
     let messageElement = props.messageData.map(message => <MessageItem text={message.message} id={message.id} />)
 
