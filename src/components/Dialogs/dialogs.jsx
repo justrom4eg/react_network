@@ -3,20 +3,33 @@ import ContactItem from './ContactItem/contactItem';
 import MessageItem from './MessageItem/messageItem';
 
 const dialogs = () => {
+
+    let contactData = [
+        {name: "Nata", id: 0},
+        {name: "Dima", id: 1},
+        {name: "Katia", id: 2},
+        {name: "Nazar", id: 3},
+        {name: "Ira", id: 4},
+        {name: "Ivan", id: 5}
+    ];
+
+    let dialogsElement = contactData.map( (dialog) => <ContactItem name={dialog.name} id={dialog.id}/>)
+
+    let messageData = [
+        {message: "Hello", id:0},
+        {message: "Hi!", id:1},
+        {message: "How are you?", id:2}
+    ]
+
+    let messageElement = messageData.map(message => <MessageItem text={message.message} id={message.id}/>)
+
     return (
             <div className={classes.content}>
                 <div className={classes.contact}>
-                    <ContactItem name="Nata" id="1"/>
-                    <ContactItem name="Dima" id="2"/>
-                    <ContactItem name="Katia" id="3"/>
-                    <ContactItem name="Nazar" id="4"/>
-                    <ContactItem name="Ira" id="5"/>
-                    <ContactItem name="Ivan" id="6"/>
+                    {dialogsElement}
                 </div>
                 <div className={classes.message}>
-                    <MessageItem text="Hello"/>
-                    <MessageItem text="Hi!"/>
-                    <MessageItem text="How are you?"/>              
+                    {messageElement}          
                 </div>
             </div>
     )
