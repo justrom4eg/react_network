@@ -13,7 +13,7 @@ let state = {
             { name: "Dima", id: 1 , img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSERXUGkaruU8cBozZF_YDkbM1IOPoqDkTrqg&usqp=CAU"},
             { name: "Katia", id: 2 , img:"https://i.pinimg.com/736x/d1/a7/32/d1a7328c125fc100eec718cd86e1004e.jpg"},
             { name: "Nazar", id: 3 , img:"https://mi100.info/wp-content/uploads/2018/12/avatarka-1041x1041.jpg"},
-            { name: "Ira", id: 4 , img:"https://i.pinimg.com/originals/a1/c0/81/a1c0819b1829e41fca6f99c5cf7f72a0.jpg"},
+            { name: "Ira", id: 4 , img:"https://news.direttagoal.it/wp-content/uploads/2022/02/Megan-Fox-20220209-newsdirettagoal-1.jpg"},
             { name: "Ivan", id: 5 , img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnHyYLNbAa87Y1ngLYHptQEVl2i6ahqhbMxw&usqp=CAU"}
         ],
         messageData: [

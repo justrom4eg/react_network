@@ -13,7 +13,7 @@ function App(props) {
   return (
       <div className='app-wrapper'>
         <Header />
-        <Nav />
+        <Nav contactData={props.state.dialog.contactData}/>
         <div className='contentStyle'>
           <Routes>
             <Route path='/messages/*' element={<Dialogs contactData={props.state.dialog.contactData} messageData={props.state.dialog.messageData} />} />

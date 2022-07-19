@@ -8,8 +8,14 @@ const contactItem = (props) => {
 
     return (
         <div className={classes.item}>
-            <span className={classes.imgContact}><img src={props.img} alt="" /> </span>
-            <NavLink className={setActive} to={path}>{props.name}</NavLink>
+            <NavLink className={setActive} to={path}>
+                <span className={classes.imgContact}>
+                    <div>
+                        <img src={props.img} alt="" />
+                        {props.name}
+                    </div>
+                </span>
+            </NavLink>
         </div>
     )
 }
