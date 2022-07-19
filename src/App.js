@@ -17,7 +17,7 @@ function App(props) {
         <div className='contentStyle'>
           <Routes>
             <Route path='/messages/*' element={<Dialogs contactData={props.state.dialog.contactData} messageData={props.state.dialog.messageData} />} />
-            <Route path='/profile' element={<Profile postData={props.state.posts.postData} />} />
+            <Route path='/profile' element={<Profile postData={props.state.posts.postData} addPost={props.addPost}/>} />
             <Route path='/music' element={<Music />} />
             <Route path='/news' element={<News />} />
             <Route path='/settings' element={<Settings />} />
