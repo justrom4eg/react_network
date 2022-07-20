@@ -1,3 +1,5 @@
+import {rerenderEntireTree} from './../render'
+
 let state = {
     posts: {
         postData: [
@@ -6,6 +8,7 @@ let state = {
             { id: 2, name: "Katia", message: "I disagree...", like: 17, img: "https://themoney.co/wp-content/uploads/2022/01/How-much-does-Ariana-Grande-make-2020-scaled.jpg" },
             { id: 3, name: "Katia", message: "REACT TOP", like: 119, img: "https://themoney.co/wp-content/uploads/2022/01/How-much-does-Ariana-Grande-make-2020-scaled.jpg" }
         ],
+        newPostText: ""
     },
     dialog: {
         contactData: [
@@ -24,15 +27,32 @@ let state = {
     }
 }
 
-export let addPost = (newMessage) => {
+export let addMessage = (newMessage) => {
+    let message = {
+        id: 3,
+        message: newMessage,
+    }
+    state.dialog.messageData.push(message);
+    rerenderEntireTree(state)
+}
+
+export let addPost = () => {
     let post = {
         id: 4,
         name: "Katia",
-        message: newMessage,
+        message: state.posts.newPostText,
         like: 0,
         img: "https://themoney.co/wp-content/uploads/2022/01/How-much-does-Ariana-Grande-make-2020-scaled.jpg"
     }
     state.posts.postData.push(post);
+    rerenderEntireTree(state)
 }
+
+export let updateNewText = (newText) => {
+    state.posts.newPostText = newText
+    rerenderEntireTree(state)
+}
+
+
 
 export default state

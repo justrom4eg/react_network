@@ -7,12 +7,12 @@ const dialogs = (props) => {
 
     let dialogsElement = props.contactData.map(dialog => <ContactItem name={dialog.name} id={dialog.id} img={dialog.img}/>)
 
-    let messageElement = props.messageData.map(message => <MessageItem text={message.message} id={message.id} />)
+    let messageElement = props.messageData.map(message => <MessageItem text={message.message} id={message.id}/>)
 
     let messageArea = React.createRef()
 
     let text = ()=>{
-        alert(messageArea.current.value)
+        props.addMessage(messageArea.current.value)
     }
 
     return (
