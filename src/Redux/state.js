@@ -23,14 +23,15 @@ let state = {
             { message: "Hello", id: 0 },
             { message: "Hi!", id: 1 },
             { message: "How are you?", id: 2 }
-        ]
+        ],
+        newMessageText: ""
     }
 }
 
-export let addMessage = (newMessage) => {
+export let addMessage = () => {
     let message = {
         id: 3,
-        message: newMessage,
+        message: state.dialog.newMessageText,
     }
     state.dialog.messageData.push(message);
     rerenderEntireTree(state)
@@ -50,6 +51,11 @@ export let addPost = () => {
 
 export let updateNewText = (newText) => {
     state.posts.newPostText = newText
+    rerenderEntireTree(state)
+}
+
+export let updateNewMessage = (newText) => {
+    state.dialog.newMessageText = newText
     rerenderEntireTree(state)
 }
 
