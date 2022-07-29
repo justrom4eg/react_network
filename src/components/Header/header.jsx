@@ -3,7 +3,7 @@ import classes from './header.module.css';
 const header = () => {
     return (
         <header className={classes.header}>
-            <img src='http://ibthemespro.com/docs/beny/img/side-nav/cmm4.png'></img>
+            <img src='http://ibthemespro.com/docs/beny/img/side-nav/cmm4.png' className={classes.AppLogo}></img>
             <span className={classes.logoSpan}>Social React World</span>
         </header>
     )

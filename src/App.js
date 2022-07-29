@@ -11,19 +11,19 @@ import { Routes, Route } from 'react-router-dom';
 
 function App(props) {
   return (
-      <div className='app-wrapper'>
-        <Header />
-        <Nav contactData={props.state.dialog.contactData}/>
-        <div className='contentStyle'>
-          <Routes>
-            <Route path='/messages/*' element={<Dialogs contactData={props.state.dialog.contactData} messageData={props.state.dialog.messageData} newMessageText={props.state.dialog.newMessageText} addMessage={props.addMessage} updateNewMessage={props.updateNewMessage}/>} />
-            <Route path='/profile' element={<Profile postData={props.state.posts.postData}  newPostText={props.state.posts.newPostText} addPost={props.addPost} updateNewText={props.updateNewText}/>} />
-            <Route path='/music' element={<Music />} />
-            <Route path='/news' element={<News />} />
-            <Route path='/settings' element={<Settings />} />
-          </Routes>
-        </div>
+    <div className='app-wrapper'>
+      <Header />
+      <Nav contactData={props.state.dialog.contactData} />
+      <div className='contentStyle'>
+        <Routes>
+          <Route path='/messages/*' element={<Dialogs contactData={props.state.dialog.contactData} messageData={props.state.dialog.messageData} newMessageText={props.state.dialog.newMessageText} addMessage={props.addMessage} updateNewMessage={props.updateNewMessage} />} />
+          <Route path='/profile' element={<Profile postData={props.state.posts.postData} newPostText={props.state.posts.newPostText} addPost={props.addPost} updateNewText={props.updateNewText} />} />
+          <Route path='/music' element={<Music />} />
+          <Route path='/news' element={<News />} />
+          <Route path='/settings' element={<Settings />} />
+        </Routes>
       </div>
+    </div>
   );
 }
 

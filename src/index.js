@@ -8,14 +8,14 @@ import store from './Redux/state';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-export function  rerenderEntireTree (){
-    root.render(
-      <React.StrictMode>
-        <Router>
-          <App state={store.getState()} addPost={store.addPost.bind(store)} addMessage={store.addMessage.bind(store)} updateNewText={store.updateNewText.bind(store)} updateNewMessage={store.updateNewMessage.bind(store)}/>
-        </Router>
-      </React.StrictMode>
-    );
+function rerenderEntireTree() {
+  root.render(
+    <React.StrictMode>
+      <Router>
+        <App state={store.getState()} addPost={store.addPost.bind(store)} addMessage={store.addMessage.bind(store)} updateNewText={store.updateNewText.bind(store)} updateNewMessage={store.updateNewMessage.bind(store)} />
+      </Router>
+    </React.StrictMode>
+  );
 }
 
 rerenderEntireTree(store.getState())
