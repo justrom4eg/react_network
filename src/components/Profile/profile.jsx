@@ -7,7 +7,7 @@ function profile(props) {
     <main className={classes.content}>
       <div className={classes.bgPhoto}></div>
       <PersonalInfo />
-      <MyPosts postData={props.postData} newPostText={props.newPostText} addPost={props.addPost} updateNewText={props.updateNewText}/>
+      <MyPosts postData={props.postData} newPostText={props.newPostText} dispatch={props.dispatch}/>
     </main>
   )
 }

@@ -2,23 +2,24 @@ import React from 'react';
 import classes from './dialogs.module.css';
 import ContactItem from './ContactItem/contactItem';
 import MessageItem from './MessageItem/messageItem';
+import { type } from '@testing-library/user-event/dist/type';
 
 const dialogs = (props) => {
 
-    let dialogsElement = props.contactData.map(dialog => <ContactItem name={dialog.name} id={dialog.id} img={dialog.img}/>)
+    let dialogsElement = props.contactData.map(dialog => <ContactItem name={dialog.name} id={dialog.id} img={dialog.img} />)
 
-    let messageElement = props.messageData.map(message => <MessageItem text={message.message} id={message.id}/>)
+    let messageElement = props.messageData.map(message => <MessageItem text={message.message} id={message.id} />)
 
     let messageArea = React.createRef()
 
-    let text = ()=>{
-        props.addMessage()
-        props.updateNewMessage("")
+    let text = () => {
+        props.dispatch({ type: "ADD-MESSAGE" })
+        props.dispatch({ type: "UPDATE-NEW-MESSAGE", newText: "" })
     }
 
-    let onChangeMessage = () =>{
+    let onChangeMessage = () => {
         let text = messageArea.current.value
-        props.updateNewMessage(text)
+        props.dispatch({ type: "UPDATE-NEW-MESSAGE", newText: text })
     }
 
     return (
@@ -28,7 +29,7 @@ const dialogs = (props) => {
             </div>
             <div className={classes.message}>
                 <div>
-                {messageElement}
+                    {messageElement}
                 </div>
                 <div>
                     <textarea onChange={onChangeMessage} ref={messageArea} cols="30" rows="10" value={props.newMessageText}></textarea>

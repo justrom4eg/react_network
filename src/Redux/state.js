@@ -1,3 +1,5 @@
+import { type } from "@testing-library/user-event/dist/type"
+
 let store = {
     _state: {
         posts: {
@@ -26,44 +28,44 @@ let store = {
             newMessageText: ""
         }
     },
-    getState() {
-        return this._state
-    },
     _rerenderEntireTree() {
         console.log("rerender tree")
+    },
+    getState() {
+        return this._state
     },
     getRerender() {
         return this._rerenderEntireTree
     },
-    addMessage() {
-        let message = {
-            id: 3,
-            message: this._state.dialog.newMessageText,
-        }
-        this._state.dialog.messageData.push(message);
-        this._rerenderEntireTree(this._state)
-    },
-    addPost() {
-        let post = {
-            id: 4,
-            name: "Katia",
-            message: this._state.posts.newPostText,
-            like: 0,
-            img: "https://themoney.co/wp-content/uploads/2022/01/How-much-does-Ariana-Grande-make-2020-scaled.jpg"
-        }
-        this._state.posts.postData.push(post);
-        this._rerenderEntireTree(this._state)
-    },
-    updateNewText(newText) {
-        this._state.posts.newPostText = newText
-        this._rerenderEntireTree(this._state)
-    },
-    updateNewMessage(newText) {
-        this._state.dialog.newMessageText = newText
-        this._rerenderEntireTree(this._state)
-    },
     subscriber(observer) {
         this._rerenderEntireTree = observer
+    },
+
+    dispatch(action) {
+        if (action.type === "ADD-POST") {
+            let post = {
+                id: 4,
+                name: "Katia",
+                message: this._state.posts.newPostText,
+                like: 0,
+                img: "https://themoney.co/wp-content/uploads/2022/01/How-much-does-Ariana-Grande-make-2020-scaled.jpg"
+            }
+            this._state.posts.postData.push(post);
+            this._rerenderEntireTree(this._state)
+        } else if (action.type === "UPDATE-NEW-TEXT") {
+            this._state.posts.newPostText = action.newText
+            this._rerenderEntireTree(this._state)
+        } else if (action.type === "ADD-MESSAGE") {
+            let message = {
+                id: 3,
+                message: this._state.dialog.newMessageText,
+            }
+            this._state.dialog.messageData.push(message);
+            this._rerenderEntireTree(this._state)
+        } else if (action.type === "UPDATE-NEW-MESSAGE") {
+            this._state.dialog.newMessageText = action.newText
+            this._rerenderEntireTree(this._state)
+        }
     }
 }
 

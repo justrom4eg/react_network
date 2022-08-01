@@ -12,7 +12,7 @@ function rerenderEntireTree() {
   root.render(
     <React.StrictMode>
       <Router>
-        <App state={store.getState()} addPost={store.addPost.bind(store)} addMessage={store.addMessage.bind(store)} updateNewText={store.updateNewText.bind(store)} updateNewMessage={store.updateNewMessage.bind(store)} />
+        <App state={store.getState()} dispatch={store.dispatch.bind(store)}/>
       </Router>
     </React.StrictMode>
   );
