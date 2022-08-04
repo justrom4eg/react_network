@@ -67,5 +67,29 @@ let store = {
     }
 }
 
+export let addPostActionCreator = () => { 
+    return { type: "ADD-POST" }
+}
+
+export let updateNewTextActionCreator = (newText) =>{
+    return { 
+        type: "UPDATE-NEW-TEXT",
+        newText: newText 
+    }
+}
+
+export let addMessageActionCreator = () => {
+    return {
+        type: "ADD-MESSAGE"
+    }
+}
+
+export let updateNewMessageActionCreator = (newText) => {
+    return {
+        type: "UPDATE-NEW-MESSAGE",
+        newText: newText
+    }
+}
+
 
 export default store
