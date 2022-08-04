@@ -1,5 +1,3 @@
-import { type } from "@testing-library/user-event/dist/type"
-
 let store = {
     _state: {
         posts: {
@@ -68,5 +66,6 @@ let store = {
         }
     }
 }
+
 
 export default store

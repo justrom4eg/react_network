@@ -2,9 +2,9 @@ import React from 'react';
 import classes from './dialogs.module.css';
 import ContactItem from './ContactItem/contactItem';
 import MessageItem from './MessageItem/messageItem';
-import { type } from '@testing-library/user-event/dist/type';
 
 const dialogs = (props) => {
+    console.log(props)
 
     let dialogsElement = props.contactData.map(dialog => <ContactItem name={dialog.name} id={dialog.id} img={dialog.img} />)
 
@@ -13,8 +13,10 @@ const dialogs = (props) => {
     let messageArea = React.createRef()
 
     let text = () => {
-        props.dispatch({ type: "ADD-MESSAGE" })
-        props.dispatch({ type: "UPDATE-NEW-MESSAGE", newText: "" })
+        if (props.newMessageText !== "") {
+            props.dispatch({ type: "ADD-MESSAGE" })
+            props.dispatch({ type: "UPDATE-NEW-MESSAGE", newText: "" })
+        }
     }
 
     let onChangeMessage = () => {
@@ -32,7 +34,7 @@ const dialogs = (props) => {
                     {messageElement}
                 </div>
                 <div>
-                    <textarea onChange={onChangeMessage} ref={messageArea} cols="30" rows="10" value={props.newMessageText}></textarea>
+                    <textarea onChange={onChangeMessage} className={classes.textarea} ref={messageArea} value={props.newMessageText}></textarea>
                 </div>
                 <div>
                     <button onClick={text}>Send</button>

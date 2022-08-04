@@ -3,19 +3,22 @@ import classes from "./myPosts.module.css"
 import Post from "./Post/post"
 
 const myPosts = (props) => {
+    console.log(props)
 
     let postElement = props.postData.map(post => <Post name={post.name} message={post.message} img={post.img} like={post.like} />)
 
     let textAreaV = React.createRef()
 
     let text = () => {
-        props.dispatch({ type: "ADD-POST" })
-        props.dispatch({ type: "UPDATE-NEW-TEXT", newText: "" })
+        if (props.newPostText !== "") {
+            props.dispatch({ type: "ADD-POST" })
+            props.dispatch({ type: "UPDATE-NEW-TEXT", newText: "" })
+        }
     }
 
     let onChangePost = () => {
-        let text = textAreaV.current.value
-        props.dispatch({ type: "UPDATE-NEW-TEXT", newText: text })
+        let textPost = textAreaV.current.value
+        props.dispatch({ type: "UPDATE-NEW-TEXT", newText: textPost })
     }
 
     return (

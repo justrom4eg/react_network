@@ -16,7 +16,7 @@ function App(props) {
       <Nav contactData={props.state.dialog.contactData} />
       <div className='contentStyle'>
         <Routes>
-          <Route path='/messages/*' element={<Dialogs contactData={props.state.dialog.contactData} messageData={props.state.dialog.messageData} dispatch={props.dispatch} />} />
+          <Route path='/messages/*' element={<Dialogs contactData={props.state.dialog.contactData} messageData={props.state.dialog.messageData} newMessageText={props.state.dialog.newMessageText} dispatch={props.dispatch} />} />
           <Route path='/profile' element={<Profile postData={props.state.posts.postData} newPostText={props.state.posts.newPostText} dispatch={props.dispatch} />} />
           <Route path='/music' element={<Music />} />
           <Route path='/news' element={<News />} />
