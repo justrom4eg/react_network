@@ -1,3 +1,6 @@
+import dialogReducer from './dialogReducer'
+import profileReducer from './profileReducer'
+
 let store = {
     _state: {
         posts: {
@@ -40,56 +43,15 @@ let store = {
     },
 
     dispatch(action) {
-        if (action.type === "ADD-POST") {
-            let post = {
-                id: 4,
-                name: "Katia",
-                message: this._state.posts.newPostText,
-                like: 0,
-                img: "https://themoney.co/wp-content/uploads/2022/01/How-much-does-Ariana-Grande-make-2020-scaled.jpg"
-            }
-            this._state.posts.postData.push(post);
-            this._rerenderEntireTree(this._state)
-        } else if (action.type === "UPDATE-NEW-TEXT") {
-            this._state.posts.newPostText = action.newText
-            this._rerenderEntireTree(this._state)
-        } else if (action.type === "ADD-MESSAGE") {
-            let message = {
-                id: 3,
-                message: this._state.dialog.newMessageText,
-            }
-            this._state.dialog.messageData.push(message);
-            this._rerenderEntireTree(this._state)
-        } else if (action.type === "UPDATE-NEW-MESSAGE") {
-            this._state.dialog.newMessageText = action.newText
-            this._rerenderEntireTree(this._state)
-        }
+
+        this._state.dialog = dialogReducer(this._state.dialog, action)
+        this._state.posts = profileReducer(this._state.posts, action)
+
+
+        this._rerenderEntireTree(this._state)
+
+        
     }
 }
-
-export let addPostActionCreator = () => { 
-    return { type: "ADD-POST" }
-}
-
-export let updateNewTextActionCreator = (newText) =>{
-    return { 
-        type: "UPDATE-NEW-TEXT",
-        newText: newText 
-    }
-}
-
-export let addMessageActionCreator = () => {
-    return {
-        type: "ADD-MESSAGE"
-    }
-}
-
-export let updateNewMessageActionCreator = (newText) => {
-    return {
-        type: "UPDATE-NEW-MESSAGE",
-        newText: newText
-    }
-}
-
 
 export default store
