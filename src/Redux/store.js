@@ -38,7 +38,7 @@ let store = {
     getRerender() {
         return this._rerenderEntireTree
     },
-    subscriber(observer) {
+    subscribe(observer) {
         this._rerenderEntireTree = observer
     },
 
