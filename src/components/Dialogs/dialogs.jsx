@@ -5,7 +5,6 @@ import MessageItem from './MessageItem/messageItem';
 import {addMessageActionCreator, updateNewMessageActionCreator} from '../../Redux/dialogReducer'
 
 const dialogs = (props) => {
-    console.log(props)
 
     let dialogsElement = props.contactData.map(dialog => <ContactItem name={dialog.name} id={dialog.id} img={dialog.img} />)
 

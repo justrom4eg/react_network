@@ -1,4 +1,4 @@
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { combineReducers, legacy_createStore as createStore} from "@reduxjs/toolkit";
 import dialogReducer from './dialogReducer'
 import profileReducer from './profileReducer'
 
@@ -7,6 +7,6 @@ let reducers = combineReducers({
     posts: profileReducer
 })
 
-let store = configureStore({reducer:reducers})
+let store = legacy_createStore(reducers)
 
 export default store
